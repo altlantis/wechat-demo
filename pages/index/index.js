@@ -1,0 +1,52 @@
+//index.js
+//获取应用实例
+var app = getApp()
+Page({
+  data:{
+      select:"index",
+      navIndex:0,
+      nav:[{title:"足球现场"},
+            {title:"足球生活"},
+            {title:"足球美女"}],
+      list1s:[
+        {img:"../../img/index/i1.png",title:"贝克汉姆"},
+        {img:"../../img/index/i1.png",title:"贝克汉姆"},
+        {img:"../../img/index/i1.png",title:"贝克汉姆"},
+        {img:"../../img/index/i1.png",title:"贝克汉姆"},
+        {img:"../../img/index/i1.png",title:"贝克汉姆"},
+        {img:"../../img/index/i1.png",title:"贝克汉姆"}
+      ],
+      list2s:[
+        {img:"../../img/index/i2.png",title:"陈冠希"},
+        {img:"../../img/index/i2.png",title:"陈冠希"},
+        {img:"../../img/index/i2.png",title:"陈冠希"},
+        {img:"../../img/index/i2.png",title:"陈冠希"},
+        {img:"../../img/index/i2.png",title:"陈冠希"},
+        {img:"../../img/index/i2.png",title:"陈冠希"}
+      ],
+      list3s:[
+        {img:"../../img/index/i3.png",title:"足球宝贝"},
+        {img:"../../img/index/i3.png",title:"足球宝贝"},
+        {img:"../../img/index/i3.png",title:"足球宝贝"},
+        {img:"../../img/index/i3.png",title:"足球宝贝"},
+        {img:"../../img/index/i3.png",title:"足球宝贝"},
+        {img:"../../img/index/i3.png",title:"足球宝贝"}
+      ]
+  },
+  
+  swiperChange(event){
+    //console.log(event.detail.current)
+    this.setData({
+      navIndex:event.detail.current
+    })
+  },
+  handleChange(event){
+    this.setData({
+      navIndex:event.target.dataset.index
+      
+    })
+  },
+  test(event){
+    console.log(111)
+  }
+})
